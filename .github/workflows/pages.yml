@@ -2,7 +2,10 @@ name: Deploy Conveya site to Pages
 
 on:
   push:
-    branches: ["claude/build-publish-basic-Z15Pi"]
+    branches:
+      - "claude/brainrot-roblox-game-n0O6M"
+      - "claude/build-publish-basic-Z15Pi"
+      - "main"
   workflow_dispatch:
 
 permissions:
