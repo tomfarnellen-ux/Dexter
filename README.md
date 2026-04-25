@@ -9,10 +9,10 @@ Static HTML/CSS/JS landing page based on the Conveya pitch deck.
 To preview locally:
 
 ```sh
-cd web && python3 -m http.server 8080
+python3 -m http.server 8080
 # then open http://localhost:8080
 ```
 
-The repo's `.github/workflows/pages.yml` deploys the contents of this folder
-to GitHub Pages on every push to the development branch. Enable Pages in
-the repo settings (Source: GitHub Actions) the first time.
+The repo's `.github/workflows/pages.yml` deploys the site to GitHub Pages
+on every push to the development branch. Enable Pages in the repo settings
+(Source: GitHub Actions) the first time.
