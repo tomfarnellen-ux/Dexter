@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Conveya — The white-labelled AI that opens cases while you sleep</title>
+<meta name="description" content="Conveya is the buyer-onboarding AI agent for UK estate agents. Quotes, ID, and source-of-funds collected in minutes — not 72 hours." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a href="#" class="logo">Conveya</a>
+    <nav>
+      <a href="#problem">Problem</a>
+      <a href="#product">Product</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#plan">Plan</a>
+      <a href="#contact" class="cta-mini">Talk to us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Pre-seed · UK Conveyancing</p>
+    <h1>Let&rsquo;s build the thing<br /><em>you keep writing about.</em></h1>
+    <p class="lede">A white-labelled AI agent that takes a buyer from accepted offer to instructed solicitor in under <strong>5 minutes</strong> — instead of the industry average <strong>72 hours</strong>.</p>
+    <div class="hero-cta">
+      <a class="btn primary" href="#quote">Try the instant quote</a>
+      <a class="btn ghost" href="#plan">See the 60-day plan</a>
+    </div>
+  </div>
+</section>
+
+<section id="problem" class="section dark">
+  <div class="wrap">
+    <p class="kicker">The 72-hour problem</p>
+    <h2>UK conveyancing has a <em>72-hour</em> problem.</h2>
+    <p class="sub">Every accepted offer leaks for three days while a buyer hunts for a quote, fills out paper forms, and tries to copy their passport. About 1 in 3 deals fall through before exchange.</p>
+    <div class="stats">
+      <div class="stat">
+        <span class="num" data-count="1" data-suffix="↑">1↑</span>
+        <span class="lbl">in 3 sales fall through<br />before exchange</span>
+      </div>
+      <div class="stat">
+        <span class="num" data-count="5" data-suffix="m">5m</span>
+        <span class="lbl">average time to a<br />Conveya-instructed file</span>
+      </div>
+      <div class="stat">
+        <span class="num" data-prefix="£" data-count="3.5" data-suffix="bn">£3.5bn</span>
+        <span class="lbl">wasted by UK buyers<br />and sellers each year</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="product" class="section">
+  <div class="wrap">
+    <p class="kicker">Why it&rsquo;s different</p>
+    <h2>A white-labelled AI<br />that <em>opens cases</em> while you sleep.</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Branded for the agent</h3>
+        <p>Your colours, your domain, your tone. Buyers think they&rsquo;re still talking to the agency they trusted with their offer.</p>
+      </div>
+      <div class="card">
+        <h3>Instructs in minutes</h3>
+        <p>Quote, ID check, source of funds and AML packaged into a single conversational flow. The solicitor wakes up to a complete file.</p>
+      </div>
+      <div class="card">
+        <h3>Pays for itself on day one</h3>
+        <p>Each instructed file pays the platform fee and a referral. No procurement cycle, no discovery call.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark accent">
+  <div class="wrap">
+    <p class="kicker">Our unfair advantages</p>
+    <h2>We are not building<br />a CRM with a chatbot.</h2>
+    <ul class="bullets">
+      <li><strong>Two co-founders</strong> with combined 18 years inside UK estate agency tech and conveyancing operations.</li>
+      <li><strong>Three signed LOIs</strong> covering 5,000 branches before a line of code.</li>
+      <li><strong>£10k MRR pilots</strong> contractually on the table for the first paid week of beta.</li>
+      <li><strong>One model partner</strong> already underwriting the AI cost so margin is positive from buyer #1.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="quote" class="section">
+  <div class="wrap calc">
+    <p class="kicker">Try it</p>
+    <h2>Instant quote, the way a buyer sees it.</h2>
+    <p class="sub">Drop in a price &mdash; we&rsquo;ll show the same number a buyer sees inside 60 seconds of accepting an offer.</p>
+    <form id="quoteForm" class="quote-form" novalidate>
+      <label>
+        <span>Property price</span>
+        <div class="input-money">
+          <span>£</span>
+          <input type="number" id="price" min="50000" max="5000000" step="1000" value="425000" inputmode="numeric" />
+        </div>
+      </label>
+      <label>
+        <span>Tenure</span>
+        <select id="tenure">
+          <option value="freehold">Freehold</option>
+          <option value="leasehold">Leasehold (+£250)</option>
+        </select>
+      </label>
+      <label class="check">
+        <input type="checkbox" id="ftb" />
+        <span>First-time buyer</span>
+      </label>
+      <button type="submit" class="btn primary">Get my quote</button>
+    </form>
+    <div id="quoteResult" class="quote-result" hidden>
+      <div class="line"><span>Legal fee</span><span class="v" data-k="legal">£0</span></div>
+      <div class="line"><span>Searches</span><span class="v" data-k="searches">£0</span></div>
+      <div class="line"><span>Stamp duty</span><span class="v" data-k="sdlt">£0</span></div>
+      <div class="line"><span>VAT</span><span class="v" data-k="vat">£0</span></div>
+      <div class="line total"><span>Total today</span><span class="v" data-k="total">£0</span></div>
+      <p class="finep">Indicative only &middot; produced client-side from public ranges. Real Conveya quotes pull from your panel.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="section dark">
+  <div class="wrap">
+    <p class="kicker">Pricing</p>
+    <h2>5,000 branches.<br />One ugly <em>sound</em>.</h2>
+    <div class="prices">
+      <div class="price">
+        <p class="tag">Per instructed file</p>
+        <p class="big">£5,000<span>/mo at 50/day</span></p>
+        <p class="muted">Ramps with branches — no seat fees, no setup.</p>
+      </div>
+      <div class="price hi">
+        <p class="tag">Year-1 contracted</p>
+        <p class="big">£240k<span>ARR signed</span></p>
+        <p class="muted">From the three groups already on paper.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="plan" class="section">
+  <div class="wrap">
+    <p class="kicker">A 60-day shipping plan</p>
+    <h2>Built for <em>day one</em>.</h2>
+    <ol class="plan">
+      <li><span>Day 0&ndash;14</span><strong>Branded buyer flow</strong><p>Quote, ID, AML and source-of-funds in one conversational pass.</p></li>
+      <li><span>Day 15&ndash;30</span><strong>Solicitor handover</strong><p>Two-way file push to the four panel CMS systems most agents already use.</p></li>
+      <li><span>Day 31&ndash;45</span><strong>Pilot live</strong><p>Three signed groups, one branded URL each, real money on instruction.</p></li>
+      <li><span>Day 46&ndash;60</span><strong>Network effect</strong><p>The fourth and fifth group sign because the first three closed deals faster.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="contact" class="section dark">
+  <div class="wrap narrow">
+    <p class="kicker">50/50 co-founders from day one</p>
+    <h2>If this looks like<br />the thing you keep writing about &mdash; <em>tell us</em>.</h2>
+    <form id="contactForm" class="contact-form" novalidate>
+      <div class="row">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required />
+        </label>
+      </div>
+      <label>
+        <span>You are a&hellip;</span>
+        <select name="role">
+          <option>Estate agent group</option>
+          <option>Conveyancing firm</option>
+          <option>Investor</option>
+          <option>Operator considering joining</option>
+        </select>
+      </label>
+      <label>
+        <span>Anything we should know</span>
+        <textarea name="note" rows="3" placeholder="Branches, ARR, the bit you wrote about at 2am&hellip;"></textarea>
+      </label>
+      <button class="btn primary" type="submit">Send</button>
+      <p id="contactStatus" class="status" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Conveya Ltd</span>
+    <span class="muted">Built day one &middot; not designed</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
